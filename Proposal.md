@@ -10,12 +10,11 @@ Bite Clock is a web application designed to help users manage their personal foo
 - As a user, I want to add food items to my inventory so that I can track what I have in stock.
 - As a user, I want to update details of food items in my inventory so that I can keep my inventory accurate.
 - As a user, I want to delete food items from my inventory so that I can remove items that I no longer have or need.
-- As a user, I want to categorize my food items (e.g., dairy, vegetables, meats) so that I can organize my inventory more effectively.
+- As a user, I want to categorize my food items by location (fridge, shelf, pantry) so that I can organize my inventory more effectively.
 
 ## Stretch Goals
 
 - As a user, I want to receive notifications when my food items are approaching their expiration dates so that I can use or consume them before they go bad.
-- As a user, I want to customize my notification preferences (e.g., frequency, channels) so that I can receive alerts in a way that suits my needs.
 - As a user, I want to see visualizations of my food inventory (e.g., pie charts of categories, bar graphs of expiring items) so that I can easily understand my stock levels and expiration trends.
 
 ## Development Plan
@@ -53,15 +52,13 @@ Bite Clock is a web application designed to help users manage their personal foo
 ### Day 7: Final Touches and Deployment
 
 - Add any final touches to the user interface or functionality.
-- Deploy the application to a hosting service.
+- Deploy the application to Heroku.
 
 ## Technologies Used
 
 - Backend: Node.js, Express
 - Database: MongoDB
-- Frontend: HTML, CSS, JavaScript (optional frontend framework)
+- Frontend: HTML, CSS, JavaScript
 - Authentication: JWT
-
-## Getting Started
 
 

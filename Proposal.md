@@ -1,6 +1,6 @@
 # Bite Clock - The Food Expiration Tracker
 
-The Food Expiration Tracker is a web application designed to help users manage their personal food inventory and reduce food waste by notifying them of upcoming expiration dates.
+Bite Clock is a web application designed to help users manage their personal food inventory and reduce food waste by notifying them of upcoming expiration dates.
 
 ## MVP Features
 

@@ -1,98 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Expiration Tracker</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Artisanal Food Stash Tracker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Food Expiration Tracker</h1>
-    <div id="food-list">
-    </div>
-    <form id="add-food-form">
-        <h2>Add Food Item</h2>
-        <label for="food-name">Food Name:</label>
-        <input type="text" id="food-name" name="food-name" required>
+  <header>
+    <h1 class="centered">Bite Clock</h1>
+  </header>
+  <main>
+    <section id="register-form">
+      <h2>Fresh Account?</h2>
+      <form id="register-form">
+        <label for="register-username">Username (Keep it Groovy):</label>
+        <input type="text" id="register-username" name="username" required>
         <br>
-        <label for="food-quantity">Quantity:</label>
-        <input type="number" id="food-quantity" name="food-quantity" min="1" required>
+        <label for="register-password">Password:</label>
+        <input type="password" id="register-password" name="password" required>
         <br>
-        <label for="expiry-date">Expiry Date:</label>
-        <input type="date" id="expiry-date" name="expiry-date" required>
+        <button type="submit">Join the Food Revolution</button>
+      </form>
+    </section>
+    <section id="login-form">
+      <h2>Already Got the Goods?</h2>
+      <form id="login-form">
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" name="username" required>
         <br>
-        <button type="submit">Add Item</button>
-    </form>
-
-    <script>
-        // Sample Javascript to simulate data fetching and manipulation (replace with actual data storage)
-        const foodList = document.getElementById('food-list');
-        const addFoodForm = document.getElementById('add-food-form');
-        let currentFoodItem = null; // Variable to store the food item being edited
-
-        function addFoodItemToList(foodItem) {
-            const listItem = document.createElement('li');
-            listItem.innerHTML = `
-                ${foodItem.name} (Qty: ${foodItem.quantity}) - Expires: <span class="expiry-date">${foodItem.expiryDate}</span>
-                <button data-food-name="${foodItem.name}" class="edit-button">Edit</button>
-                <button data-food-name="${foodItem.name}" class="delete-button">Delete</button>
-            `;
-            foodList.appendChild(listItem);
-
-            // Add click event listeners for edit and delete buttons
-            const editButton = listItem.querySelector('.edit-button');
-            editButton.addEventListener('click', function() {
-                const foodName = this.dataset.foodName;
-                // Pre-populate the edit form with selected food item details (for editing)
-                currentFoodItem = findFoodItemByName(foodName); // Replace with actual lookup logic
-                document.getElementById('food-name').value = currentFoodItem.name;
-                document.getElementById('food-quantity').value = currentFoodItem.quantity;
-                document.getElementById('expiry-date').value = currentFoodItem.expiryDate;
-                addFoodForm.elements['submit'].value = "Save Changes"; // Change button text to "Save Changes"
-            });
-
-            const deleteButton = listItem.querySelector('.delete-button');
-            deleteButton.addEventListener('click', function() {
-                // Simulate delete logic (replace with actual functionality)
-                const foodName = this.dataset.foodName;
-                listItem.remove();
-                alert(`Deleted item: ${foodName}`);
-            });
-        }
-
-        // Simulate finding a food item by name (replace with actual data access logic)
-        function findFoodItemByName(foodName) {
-            // Replace this with logic to find the food item by name from your data store
-            // This is a placeholder for demonstration purposes
-            return {
-                name: foodName,
-                quantity: 1,
-                expiryDate: new Date().toISOString().split('T')[0]
-            };
-        }
-
-        addFoodForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            if (currentFoodItem) {
-                // Update existing food item (editing)
-                currentFoodItem.name = document.getElementById('food-name').value;
-                currentFoodItem.quantity = document.getElementById('food-quantity').value;
-                currentFoodItem.expiryDate = document.getElementById('expiry-date').value;
-                // Simulate updating the food item in your data store (replace with actual logic)
-                // updateFoodItem(currentFoodItem); // Replace with actual update function
-                currentFoodItem = null; // Clear current food item after edit
-                addFoodForm.reset(); // Reset the form
-            } else {
-                // Add a new food item
-                const newItem = {
-                    name: document.getElementById('food-name').value,
-                    quantity: document.getElementById('food-quantity').value,
-                    expiryDate: document.getElementById('expiry-date').value
-                };
-                addFoodItemToList(newItem); // Add the new item to the list
-                addFoodForm.reset(); // Reset the form
-            }
-        });
-    </script>
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="password" required>
+        <br>
+        <button type="submit">Unearth Your Stash</button>
+      </form>
+    </section>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>

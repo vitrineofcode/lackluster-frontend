@@ -1,0 +1,33 @@
+body {
+  background-color: #002f6c; /* Blockbuster blue */
+  color: #ffcc00; /* Blockbuster yellow */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  height: 100vh; /* Set height of body to full viewport height */
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+  background-color: #ffffff; /* White background for content */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  background-color: #ffcc00; /* Blockbuster yellow */
+  color: #002f6c; /* Blockbuster blue */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+.button:hover {
+  background-color: #ffdb4d; /* Lighter yellow on hover */
+}

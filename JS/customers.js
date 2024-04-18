@@ -43,12 +43,10 @@ document.getElementById('createCustomerForm').addEventListener('submit', functio
       return response.json();
   })
   .then(data => {
-      // alert('Customer created successfully!');
       console.log(data);
   })
   .catch(error => {
       console.error('Error creating the customer:', error);
-      // alert('Failed to create the customer.');
   });
 });
 
@@ -75,12 +73,10 @@ document.getElementById('updateCustomerForm').addEventListener('submit', functio
       return response.json();
   })
   .then(data => {
-      // alert('Customer updated successfully!');
       console.log(data);
   })
   .catch(error => {
       console.error('Error updating the customer:', error);
-      // alert('Failed to update the customer.');
   });
 });
 
@@ -91,7 +87,6 @@ document.getElementById('deleteCustomerForm').addEventListener('submit', functio
   const name = document.getElementById('name').value.trim(); // Get the name and trim whitespace
 
   if (!name) { // Check if the name is empty
-      alert('Please enter a valid name');
       return; // Stop the function if no name is entered
   }
 
@@ -109,11 +104,9 @@ document.getElementById('deleteCustomerForm').addEventListener('submit', functio
       return response.json();
   })
   .then(data => {
-      alert('Customer deleted successfully!');
       console.log(data);
   })
   .catch(error => {
       console.error('Error deleting the customer:', error);
-      alert('Failed to delete the customer.');
   });
 });

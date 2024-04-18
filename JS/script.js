@@ -8,7 +8,6 @@ const loginForm = document.getElementById('loginForm');
 
     try {
       const response = await fetch('https://lackluster-03e1f83af3ca.herokuapp.com/api/users/signin', {
-      // const response = await fetch('http://localhost:3000/api/users/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -20,7 +19,6 @@ const loginForm = document.getElementById('loginForm');
       if (response.ok) {
         localStorage.setItem('token', data.token);
         window.location.href = '/homepage.html';
-        // alert('Login successful!');
       } else {
         console.log(token); // Display the error message
       }

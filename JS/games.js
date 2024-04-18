@@ -48,12 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(data => {
           console.log('Success:', data);
-          // alert('Game created successfully!');
           form.reset();  // Optionally reset the form after successful submission
       })
       .catch((error) => {
           console.error('Error:', error);
-          // alert('Error creating game. Please try again.');
       });
   });
 });
@@ -70,12 +68,10 @@ document.getElementById('deleteForm').addEventListener('submit', function(event)
   })
   .then(response => response.json())
   .then(data => {
-      alert('Game deleted successfully!');
       console.log(data);
   })
   .catch(error => {
       console.error('Error deleting the game:', error);
-      alert('Failed to delete the game.');
   });
 });
 
@@ -101,11 +97,9 @@ document.getElementById('updateForm').addEventListener('submit', function(event)
       return response.json();
   })
   .then(data => {
-      alert('Game updated successfully!');
       console.log(data);
   })
   .catch(error => {
       console.error('Error updating the game:', error);
-      alert('Failed to update the game.');
   });
 });

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer List</title>
+  </head>
+  <body>
+    <h1>Welcome to LackLuster</h1>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="customers.html">Customers</a>
+      <a href="games.html">Games</a>
+    </nav>
+    <h1>Customers</h1>
+    <div id="customers"></div>
+
+    <h1>Create New Customer</h1>
+    <form id="createCustomerForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone" required />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <h1>Update Customer Details</h1>
+    <form id="updateCustomerForm">
+      <label for="currentName">Current Name:</label>
+      <input type="text" id="currentName" name="currentName" required />
+
+      <label for="newName">New Name:</label>
+      <input type="text" id="newName" name="newName" required />
+
+      <label for="newPhone">New Phone Number:</label>
+      <input type="text" id="newPhone" name="newPhone" required />
+
+      <button type="submit">Update Customer</button>
+    </form>
+
+    <h1>Delete Customer</h1>
+    <form id="deleteCustomerForm">
+      <label for="name">Customer Name:</label>
+      <input type="text" id="name" name="name" required />
+      <button type="submit">Delete Customer</button>
+    </form>
+    <script src="JS/customers.js"></script>
+  </body>
+</html>

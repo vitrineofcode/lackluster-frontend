@@ -1,0 +1,70 @@
+/* CSS/customers.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: navy;
+  text-align: center;
+}
+
+div {
+  text-align: center;
+}
+
+nav {
+  background-color: navy;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+form {
+  margin: 20px auto;
+  width: 90%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: navy;
+  color: yellow;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background-color: yellow;
+  color: navy;
+}
